@@ -1,0 +1,9 @@
+.nav-container {
+  background-color: plum;
+  font-style: bold;
+  color: rgb(241, 241, 224);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
