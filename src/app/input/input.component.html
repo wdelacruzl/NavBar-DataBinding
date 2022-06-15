@@ -1,18 +1,12 @@
 
-     <div id="cover">
-        <form method="get" action="">
-          <div class="tb">
-            <div class="td">
-                <input type="text" [(ngModel)]='title'>
-            </div>
-            <div class="td" id="s-cover">
-              <button type="submit">
-                <div id="s-circle"></div>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+<div class="middle-container">
+  <H1>Two Way Data Binding</H1>
+  <input [(ngModel)] ="title" type="text" />
+  <div>You Searched: {{ title }}</div>
+</div>
 
-      <h1>{{title}}</h1>
+<div class="bottom-container">
+  <h1>One Way Data Binding</h1>
+  <input type="text" />
+  <button (click) ='onClick()'>click</button>
+</div>

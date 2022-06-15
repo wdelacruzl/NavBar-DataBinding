@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  title: string = 'is this what you searched?'; 
+  title: string = 'Hello World'; 
+
+  onClick(){
+    console.log("Button has been clicked");
+  }
 
   constructor() { }
 
