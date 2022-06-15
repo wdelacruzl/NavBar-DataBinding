@@ -14,6 +14,19 @@ ul li{
     margin-left: 30%;
     margin-bottom: 30px;
 }
+.odd {
+    background-color: hsl(284, 100%, 80%);
+    border: 1px solid black;
+    margin-right: 550px;
+    text-align: center;
+  }
+  
+  .even {
+    background-color: #9bdcf8;
+    border: 1px solid black;
+    margin-right: 550px;
+    text-align: center;
+  }
 
 table {
     border-collapse: collapse;

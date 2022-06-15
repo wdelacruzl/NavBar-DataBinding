@@ -1,7 +1,10 @@
 <h2>Learning ngFor!</h2>
 <h4>My Favorite Movies</h4>
 <ul>
-    <li *ngFor ="let movie of movies">
+    <li *ngFor ="let movie of movies;;let even = even; let odd = odd"
+    [class.even]="even"
+    [class.odd]="odd"
+    >
         {{movie.title}} - {{movie.director}} - {{movie.releaseDate}}
 
     </li>
@@ -18,3 +21,4 @@
        <td>{{movie.releaseDate}}</td>
     </tr>
 </table>
+
