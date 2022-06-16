@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DummyComponent implements OnInit {
 
+  favoriteBooks: string = "The Starless Sea";
+  showMe: boolean = true;
+
   movies: Movie[] = [
    {title: "The Invisible Guest", director:"Oriol Paulo", releaseDate:"January 6, 2017" },
    {title:'Knives Out', director:'Rian Johnson', releaseDate:'September 7, 2019'},

@@ -1,24 +1,50 @@
 <h2>Learning ngFor!</h2>
 <h4>My Favorite Movies</h4>
 <ul>
-    <li *ngFor ="let movie of movies;;let even = even; let odd = odd"
+  <li
+    *ngFor="let movie of movies; let even = even; let odd = odd"
     [class.even]="even"
     [class.odd]="odd"
-    >
-        {{movie.title}} - {{movie.director}} - {{movie.releaseDate}}
-
-    </li>
+  >
+    {{ movie.title }} - {{ movie.director }} - {{ movie.releaseDate }}
+  </li>
 </ul>
 <table>
-    <tr>
-        <th>Movie Name</th>
-        <th>Director</th>
-        <th>Realease Date</th>
-    </tr>
-    <tr *ngFor ="let movie of movies">
-       <td>{{movie.title}}</td>
-       <td>{{movie.director}}</td>
-       <td>{{movie.releaseDate}}</td>
-    </tr>
+  <tr>
+    <th>Movie Name</th>
+    <th>Director</th>
+    <th>Realease Date</th>
+  </tr>
+  <tr *ngFor="let movie of movies">
+    <td>{{ movie.title }}</td>
+    <td>{{ movie.director }}</td>
+    <td>{{ movie.releaseDate }}</td>
+  </tr>
 </table>
 
+<h2>Learnig ngSwitch</h2>
+<div>
+  <input type="text" [(ngModel)]="favoriteBooks" />
+  <div [ngSwitch]="favoriteBooks">
+    <div *ngSwitchCase="'Harry Potter Series'">
+      I love them but The Harry Potter Series are not my favorite books
+    </div>
+    <div *ngSwitchCase="'Divergent Series'">
+      Divergent Series: Not my favorite books
+    </div>
+    <div *ngSwitchCase="'The Midnight Library'">
+      I LOVE THIS BOOK but not my favorite
+    </div>
+    <div *ngSwitchCase="'The Night Circus'">same author, wrong book</div>
+    <div *ngSwitchDefault>Not my favorite book</div>
+  </div>
+</div>
+<div class="row">
+  show <input type="checkbox" [(ngModel)]='showMe'/>
+</div>
+<p *ngIf="showMe">
+  checkbox is being checked
+</p>
+ <p *ngIf="!showMe">
+  checkbox is not being checked
+ </p>
